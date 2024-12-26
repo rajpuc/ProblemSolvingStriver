@@ -4,34 +4,15 @@
 using namespace std;
 
 
-int calculate(int n){
-	// cout<<"Running for: "<<n<<endl;
-	// if(n<3) return n;
-
-	int sum = 0;
-	// cout<<"temp: "<<sqrt(n)<<endl;
-	for(int i=1; i <= sqrt(n); i++){
-		if(n%i == 0){
-			if(i==n/i) sum += i;
-			else sum+=i+(n/i);
-			// cout<<i<<'-'<<n/i<<'-'<<sum<<endl;
-		}
-	}
-
-	return sum;
-}
-
-
-
 int sumOfDivisors(int n){
 	int sum = 0;
+	int temp=n;
 	while(n>0){
-		sum += calculate(n);
+		sum += n*(temp/n) ;
 		n--;
 	}
 	return sum;
 }
-
 
 
 int main(){
