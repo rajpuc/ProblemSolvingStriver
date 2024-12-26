@@ -1,8 +1,13 @@
-# ProblemSolvingStriver
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
 
-```cpp
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 #endif
-```
+
+    string x;
+    cin>>x;
+    cout<<"Hey" << x;
+}
