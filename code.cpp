@@ -6,10 +6,16 @@ using namespace std;
 
 int sumOfDivisors(int n){
 	int sum = 0;
-	int temp=n;
-	while(n>0){
-		sum += n*(temp/n) ;
-		n--;
+	int i=1;
+	while (i<=n){
+		int val = n/i;
+		int r = n/val;
+		
+		int num = (((r*(r+1))/2) - ((i*(i-1))/2))*val;
+		sum += num;
+		
+		i = r+1;
+
 	}
 	return sum;
 }
